@@ -29,10 +29,10 @@ public class ManutencaoAtor extends javax.swing.JDialog {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jtfNomeArtistico = new javax.swing.JLabel();
-        jtfNomeReal = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jlabel1 = new javax.swing.JLabel();
+        jlabel2 = new javax.swing.JLabel();
+        jtfNomeartistico = new javax.swing.JTextField();
+        jtfNomereal = new javax.swing.JTextField();
         btnAdicionar = new javax.swing.JButton();
         btnAlterar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
@@ -43,9 +43,15 @@ public class ManutencaoAtor extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Manutenção Ator");
 
-        jtfNomeArtistico.setText("Nome Artistico:");
+        jlabel1.setText("Nome Artistico:");
 
-        jtfNomeReal.setText("Nome Real:");
+        jlabel2.setText("Nome Real:");
+
+        jtfNomeartistico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNomeartisticoActionPerformed(evt);
+            }
+        });
 
         btnAdicionar.setText("Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
@@ -68,13 +74,13 @@ public class ManutencaoAtor extends javax.swing.JDialog {
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jtfNomeReal)
+                        .addComponent(jlabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2))
+                        .addComponent(jtfNomereal))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jtfNomeArtistico)
+                        .addComponent(jlabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfNomeartistico, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
@@ -95,12 +101,12 @@ public class ManutencaoAtor extends javax.swing.JDialog {
                 .addComponent(jLabel1)
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfNomeArtistico)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlabel1)
+                    .addComponent(jtfNomeartistico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfNomeReal)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlabel2)
+                    .addComponent(jtfNomereal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdicionar)
@@ -116,6 +122,10 @@ public class ManutencaoAtor extends javax.swing.JDialog {
     private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
 controlador.ControladorAtor.inserir(this);        // TODO add your handling code here:
     }//GEN-LAST:event_btnAdicionarActionPerformed
+
+    private void jtfNomeartisticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeartisticoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNomeartisticoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,9 +175,9 @@ controlador.ControladorAtor.inserir(this);        // TODO add your handling code
     public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnExcluir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    public javax.swing.JLabel jtfNomeArtistico;
-    public javax.swing.JLabel jtfNomeReal;
+    private javax.swing.JLabel jlabel1;
+    private javax.swing.JLabel jlabel2;
+    public javax.swing.JTextField jtfNomeartistico;
+    public javax.swing.JTextField jtfNomereal;
     // End of variables declaration//GEN-END:variables
 }
